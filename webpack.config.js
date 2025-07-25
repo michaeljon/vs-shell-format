@@ -7,6 +7,7 @@
 
 'use strict';
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 /**@type {import('webpack').Configuration}*/
@@ -27,8 +28,19 @@ const config = {
   },
   resolve: {
     // support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js', '.wasm'],
   },
+
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'node_modules/@one-ini/wasm/*.wasm'),
+          to: path.resolve(__dirname, 'dist/[name][ext]'),
+        },
+      ],
+    }),
+  ],
   module: {
     rules: [
       {
