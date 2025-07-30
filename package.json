@@ -2,8 +2,8 @@
   "name": "shell-format",
   "displayName": "shell-format",
   "description": "A formatter for shell scripts, Dockerfile, gitignore, dotenv, /etc/hosts, jvmoptions, and other file types",
-  "version": "7.2.9",
-  "publisher": "foxundermoon",
+  "version": "7.2.10",
+  "publisher": "michaeljon",
   "engines": {
     "vscode": "^1.36.0"
   },
@@ -29,10 +29,10 @@
   "icon": "logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxundermoon/vs-shell-format.git"
+    "url": "https://github.com/michaeljon/vs-shell-format.git"
   },
   "bugs": {
-    "url": "https://github.com/foxundermoon/vs-shell-format/issues"
+    "url": "https://github.com/michaeljon/vs-shell-format/issues"
   },
   "keywords": [
     "shell",
